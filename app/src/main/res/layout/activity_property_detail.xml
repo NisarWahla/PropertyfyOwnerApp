@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.PropertyDetailActivity">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/originalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_above_back"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp">
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:background="@drawable/action_ripple"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/back_white_icon" />
+
+                <TextView
+                    android:id="@+id/txt_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="Property 34567"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_17sdp" />
+
+                <ImageView
+                    android:id="@+id/downloadIcon"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:visibility="gone"
+                    android:background="@drawable/action_ripple"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/download_icon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                android:background="@drawable/back_main_below">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@color/tab_background_property_detail"
+                    android:overScrollMode="never"
+                    app:tabGravity="fill"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/purple_500"
+                    app:tabTextAppearance="@style/TabTextStyle"
+                    app:tabTextColor="#B0B0B0" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/tab_layout" />
+
+            </RelativeLayout>
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:shimmer_base_alpha="0.6"
+            app:shimmer_colored="false"
+            app:shimmer_direction="left_to_right"
+            android:background="@drawable/main_above_back"
+            app:shimmer_duration="1200"
+            app:shimmer_highlight_alpha="1"
+            app:shimmer_highlight_color="@color/white"
+            app:shimmer_shape="linear">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_above_back">
+
+                <RelativeLayout
+                    android:id="@+id/shimmer_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp">
+
+                    <ImageView
+                        android:id="@+id/shimmer_back"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/shimmer_round"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/shimmer_txt_login"
+                        android:layout_width="@dimen/_130sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:background="@drawable/shimmer_round"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17sdp" />
+
+                    <!--<ImageView
+                        android:id="@+id/shimmer_downloadIcon"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:background="@drawable/shimmer_round"
+                        android:contentDescription="@string/app_name" />-->
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shimmer_toolbar"
+                    android:background="@drawable/back_main_below">
+
+                    <LinearLayout
+                        android:id="@+id/shimmer_relative_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp">
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shimmer_round" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shimmer_round" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shimmer_round" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shimmer_round" />
+
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/shimmerOverviewFragment"
+                        layout="@layout/shimmer_fragment_overview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shimmer_relative_tab"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="visible" />
+
+                    <include
+                        android:id="@+id/shimmer_info_fragment"
+                        layout="@layout/shimmer_property_detail_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shimmer_relative_tab"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="gone" />
+
+                    <include
+                        android:id="@+id/shimmer_rentals_fragment"
+                        layout="@layout/shimmer_fragment_rentals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shimmer_relative_tab"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </RelativeLayout>
+
+</layout>

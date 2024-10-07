@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/my_property_edit_back_round">
+
+        <ImageView
+            android:id="@+id/numbers_value"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/pdf_img_icon" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/numbers_value">
+
+            <TextView
+                android:id="@+id/id_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_semibold"
+                android:gravity="center"
+                android:text="Document3434.pdf"
+                android:textAllCaps="false"
+                android:textColor="@color/black_app"
+                android:textSize="@dimen/_15sdp" />
+
+            <TextView
+                android:id="@+id/date_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_value"
+                android:fontFamily="@font/manrope_regular"
+                android:text="Sep 07,2021 - 2pm"
+                android:textAllCaps="false"
+                android:textColor="@color/app_gray_main"
+                android:textSize="@dimen/_11sdp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date_value"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/bank_transfer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/pages_icon"
+                    android:fontFamily="@font/manrope_medium"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_3sdp"
+                    android:text="2"
+                    android:textColor="@color/app_gray_main"
+                    android:textSize="@dimen/_10sdp" />
+
+                <TextView
+                    android:id="@+id/pages_in_doc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/manrope_medium"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_3sdp"
+                    android:text="@string/pages_in_doc"
+                    android:textColor="@color/app_gray_main"
+                    android:textSize="@dimen/_10sdp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/downloadIcon"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/download_green_icon" />
+    </RelativeLayout>
+</layout>

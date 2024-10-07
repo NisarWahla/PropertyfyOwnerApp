@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".fragments.propertyDetailFragments.InfoFragment">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/payment_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_20sdp">
+
+                    <TextView
+                        android:id="@+id/payment_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/property_id"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/payment_id_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/payment_id"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/manrope_bold"
+                        android:gravity="center"
+                        android:text="UN-262612"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/_13sdp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/payment_layout"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/profile_divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/address_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_one"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/txt_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/property_address"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/address_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_address"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/manrope_bold"
+                        android:text="5 Bin Habis Street, Abu Dhabi, United Arab Emirates"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/_13sdp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/address_layout"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/profile_divider_color" />
+
+                <LinearLayout
+                    android:id="@+id/bedLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_below="@id/view_two"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/txt_bedrooms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:gravity="center"
+                            android:text="Bedrooms"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_gray_main"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <ImageView
+                            android:id="@+id/bedIcon"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentBottom="true"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/bedroom_info_icon" />
+
+                        <TextView
+                            android:id="@+id/txt_bedrooms_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_toEndOf="@id/bedIcon"
+                            android:fontFamily="@font/manrope_bold"
+                            android:text="4"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black_app"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/txt_bathrooms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:gravity="center"
+                            android:text="Bathrooms"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_gray_main"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <ImageView
+                            android:id="@+id/washIcon"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentBottom="true"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/washroom_info_icon" />
+
+                        <TextView
+                            android:id="@+id/txtWashValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_toEndOf="@id/washIcon"
+                            android:fontFamily="@font/manrope_bold"
+                            android:text="4"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black_app"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/txt_parking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:gravity="center"
+                            android:text="Parkings"
+                            android:textAllCaps="false"
+                            android:textColor="@color/app_gray_main"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <ImageView
+                            android:id="@+id/parkingIcon"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentBottom="true"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/parking_info_icon" />
+
+                        <TextView
+                            android:id="@+id/txtParkValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="@dimen/_2sdp"
+                            android:layout_marginBottom="0dp"
+                            android:layout_toEndOf="@id/parkingIcon"
+                            android:fontFamily="@font/manrope_bold"
+                            android:text="1"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black_app"
+                            android:textSize="@dimen/_13sdp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/bedLayout"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/profile_divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/areaLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_three"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/txtArea"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/area"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/areaValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtArea"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/manrope_bold"
+                        android:gravity="center"
+                        android:text="23 sq.ft"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/_13sdp" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/areaLayout"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/profile_divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/amenitiesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_four"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/txtAmenities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/amenities"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/amenities_chip_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtAmenities"
+                        android:layout_marginTop="@dimen/_10sdp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/view_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/amenitiesLayout"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/profile_divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/furnishingLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_five"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/txtFurnishing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/furnishings"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/furnishing_chip_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtFurnishing"
+                        android:layout_marginTop="@dimen/_10sdp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

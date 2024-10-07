@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/my_property_edit_back_round">
+
+        <ImageView
+            android:id="@+id/ticket_img"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/al_tenantl_row_pic"
+            android:contentDescription="@string/app_name" />
+
+        <RelativeLayout
+            android:id="@+id/bank_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toStartOf="@id/callNow"
+            android:layout_toEndOf="@id/ticket_img">
+
+            <TextView
+                android:id="@+id/tenantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/manrope_medium"
+                android:lines="1"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"
+                android:text="Sheikh Al Maktoum"
+                android:textColor="@color/profile_text_black"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/totalProperties"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tenantName"
+                android:layout_marginTop="0dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/manrope_medium"
+                android:lines="1"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLines="1"
+                android:minLines="1"
+                android:singleLine="true"
+                android:text="Properties: 3"
+                android:textAllCaps="false"
+                android:textColor="@color/black_app"
+                android:textSize="@dimen/_9sdp" />
+
+            <TextView
+                android:id="@+id/check_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/totalProperties"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@drawable/status_info_received_round"
+                android:fontFamily="@font/manrope_regular"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:paddingHorizontal="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_1sdp"
+                android:text="Active"
+                android:textColor="@color/status_green_color"
+                android:textSize="@dimen/_8sdp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/callNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/call_now_style"
+            android:fontFamily="@font/manrope_regular"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="@string/call_now"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp" />
+    </RelativeLayout>
+</layout>

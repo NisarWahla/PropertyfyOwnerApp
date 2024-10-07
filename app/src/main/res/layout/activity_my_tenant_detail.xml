@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.MyPropertyActivity">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/original_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/main_above_back"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/action_ripple"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/back_white_icon" />
+
+                    <TextView
+                        android:id="@+id/txt_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:text="Sheikh Al Maktoum"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/toolbar"
+                    android:background="@drawable/back_main_below">
+
+                    <TextView
+                        android:id="@+id/txt_select_property"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:text="@string/select_property"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/drop_down_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_select_property"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/my_property_edit_back_round"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_7sdp">
+
+                        <TextView
+                            android:id="@+id/txtView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_toStartOf="@id/locations_spinner"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/manrope_medium"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:text="115, Burj ul Khalifa, Dubai"
+                            android:textColor="@color/black_app"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <ImageView
+                            android:id="@+id/locations_spinner"
+                            android:layout_width="@dimen/_14sdp"
+                            android:layout_height="@dimen/_8sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:background="@drawable/down_arrow_property"
+                            android:textAllCaps="false" />
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/drop_down_layout"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="#F9F9FA"
+                        android:overScrollMode="never"
+                        app:tabGravity="fill"
+                        app:tabMode="fixed"
+                        app:tabSelectedTextColor="@color/purple_500"
+                        app:tabTextAppearance="@style/TabTextStyle"
+                        app:tabTextColor="#B0B0B0" />
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewPager2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/tab_layout"
+                        android:layout_marginTop="@dimen/_10sdp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_above_back"
+            android:visibility="gone"
+            app:shimmer_base_alpha="0.6">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/shimmer_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp">
+
+                    <ImageView
+                        android:id="@+id/shimmer_back"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:background="@drawable/shimmer_round"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/shimmer_txt_login"
+                        android:layout_width="@dimen/_140sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/shimmer_round"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_17sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/main_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/shimmer_toolbar"
+                    android:background="@drawable/back_main_below">
+
+                    <TextView
+                        android:id="@+id/shimmer_txt_select_property"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/shimmer_round"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RelativeLayout
+                        android:id="@+id/shimmer_drop_down_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shimmer_txt_select_property"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/shimmer_round"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_7sdp">
+
+                        <TextView
+                            android:id="@+id/shimmer_txtView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_toStartOf="@id/shimmer_locations_spinner"
+                            android:ellipsize="marquee"
+                            android:fontFamily="@font/manrope_medium"
+                            android:lines="1"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:textColor="@color/black_app"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <ImageView
+                            android:id="@+id/shimmer_locations_spinner"
+                            android:layout_width="@dimen/_14sdp"
+                            android:layout_height="@dimen/_8sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:textAllCaps="false" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/shimmer_tab_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shimmer_drop_down_layout"
+                        android:layout_marginHorizontal="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shimmer_round" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shimmer_round" />
+
+                        <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shimmer_round" />
+                        <!--<View
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:background="@drawable/shimmer_round"
+                            android:layout_weight="1"/>-->
+
+                    </LinearLayout>
+
+
+                    <include
+                        android:id="@+id/shimmer_overview_fragment"
+                        layout="@layout/shimmer_overview_fragment_in_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shimmer_tab_layout"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="visible" />
+
+                    <include
+                        android:id="@+id/shimmer_info_fragment"
+                        layout="@layout/shimmer_fragment_info_in_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shimmer_tab_layout"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="gone" />
+
+                    <include
+                        android:id="@+id/shimmer_rentals_fragment"
+                        layout="@layout/shimmer_fragment_rentals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shimmer_tab_layout"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </RelativeLayout>
+</layout>

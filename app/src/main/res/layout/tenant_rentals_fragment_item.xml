@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:background="@drawable/my_property_edit_back_round">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/id_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="center"
+                android:text="Contract ID: 63974"
+                android:textAllCaps="false"
+                android:textColor="@color/app_gray_main"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_value"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:fontFamily="@font/manrope_bold"
+                android:text="Duration: 25/12/23 - 25/12/24"
+                android:textColor="@color/black_app"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/time_and_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/duration"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="center_vertical"
+                android:text="Term: 1 year"
+                android:textColor="@color/app_gray_main"
+                android:textSize="@dimen/_11sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/check_ref_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/manrope_bold"
+                android:text="@string/rent"
+                android:textAllCaps="false"
+                android:textColor="@color/black_app"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:id="@+id/rentalsAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/check_ref_value"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:lines="1"
+                android:maxLines="1"
+                android:minLines="1"
+                android:fontFamily="@font/manrope_bold"
+                android:text="AED 60,000"
+                android:textColor="@color/call_now_color"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/check_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rentalsAmount"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/active_status_back"
+                android:fontFamily="@font/manrope_semibold"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:paddingVertical="@dimen/_6sdp"
+                android:text="Active"
+                android:textColor="@color/call_now_color"
+                android:textSize="@dimen/_11sdp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

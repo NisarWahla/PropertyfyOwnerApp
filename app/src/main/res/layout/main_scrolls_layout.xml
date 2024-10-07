@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:overScrollMode="never"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_190sdp">
+
+        <RelativeLayout
+            android:id="@+id/properties_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@drawable/first_main_cell">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/property_icon"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/property_icon" />
+
+                <TextView
+                    android:id="@+id/my_properties"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="@string/my_properties"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/arrow_above_icon" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/property_right"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/my_property_pic" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/my_tenant_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_below="@id/properties_relative"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/second_main_cell"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/main_icon"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/my_tenant_icon" />
+
+                <TextView
+                    android:id="@+id/main_request"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="@string/my_tenants"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/arrow_above_icon" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/main_req_right"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/my_tenant_pic" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/maintenance_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:visibility="gone"
+            android:layout_below="@id/my_tenant_relative"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/third_main_cell">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/bills_icon"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/maintenance_icon" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/my_bills"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:text="@string/maintenance_requests"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <ImageView
+                        android:id="@+id/arrow_icon"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/arrow_above_icon" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/bills_right"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/maintenance_pic" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bills_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_below="@id/maintenance_relative"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/fourth_main_cell">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/support_icon"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/bills_icon" />
+
+                <TextView
+                    android:id="@+id/my_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="@string/bills"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    app:drawableEndCompat="@drawable/arrow_above_icon" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/support_right"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/bills_pic" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

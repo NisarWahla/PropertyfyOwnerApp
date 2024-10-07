@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--Spa or wellness center-->
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/txtAmenitiesChip"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_35sdp"
+        android:text="Example Chip"
+        app:chipBackgroundColor="@color/amenities_back"
+        app:chipIcon="@drawable/flower_icon"
+        app:chipIconSize="@dimen/_15sdp"
+        app:chipStartPadding="@dimen/_10sdp"
+        app:chipIconVisible="true"
+        android:textColor="@color/black_app" />
+</layout>

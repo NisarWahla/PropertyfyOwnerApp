@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:overScrollMode="never"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_190sdp">
+
+        <RelativeLayout
+            android:id="@+id/properties_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@drawable/shimmer_round">
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/my_tenant_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_below="@id/properties_relative"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/shimmer_round"
+            android:visibility="visible">
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/maintenance_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:visibility="gone"
+            android:layout_below="@id/my_tenant_relative"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/shimmer_round">
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/bills_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_below="@id/maintenance_relative"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/shimmer_round">
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,378 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_above_back">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/action_ripple"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/menu_icon" />
+
+            <TextView
+                android:id="@+id/txt_profile_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/manrope_bold"
+                android:text="@string/profile_info"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            tools:context=".fragments.mainFragments.ProfileFragment">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/back_main_below"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/_120sdp">
+
+                <RelativeLayout
+                    android:id="@+id/relativePic"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_20sdp">
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/profile_img"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_120sdp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/profile_img_icon"
+                        app:civ_border_color="@color/purple_500"
+                        app:civ_border_width="@dimen/_2sdp"
+                        app:civ_shadow_radius="@dimen/_10sdp" />
+
+                    <ImageView
+                        android:id="@+id/edit_profile"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:background="@drawable/pen_profile_icon"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        android:id="@+id/image_progress"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:indeterminate="true"
+                        android:indeterminateTint="@color/purple_500"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relativePic"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="@string/name"
+                    android:textColor="@color/profile_text_gray"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/txt_name_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_name"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="Sheikh Al Salih"
+                    android:textColor="@color/profile_text_black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <View
+                    android:id="@+id/view_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/txt_name_value"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/profile_divider_color" />
+
+                <TextView
+                    android:id="@+id/txt_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_one"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="@string/email"
+                    android:textColor="@color/profile_text_gray"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/txt_email_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_email"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="sheikh@gmail.com"
+                    android:textColor="@color/profile_text_black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <View
+                    android:id="@+id/view_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/txt_email_value"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/profile_divider_color" />
+
+                <TextView
+                    android:id="@+id/txt_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_two"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="@string/phone_number"
+                    android:textColor="@color/profile_text_gray"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/txt_phone_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_phone"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="090078001"
+                    android:textColor="@color/profile_text_black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <View
+                    android:id="@+id/view_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/txt_phone_value"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/profile_divider_color" />
+
+                <TextView
+                    android:id="@+id/txt_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_three"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="ID No:"
+                    android:textColor="@color/profile_text_gray"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/txt_id_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_id"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:fontFamily="@font/manrope_medium"
+                    android:text="#32523252"
+                    android:textColor="@color/profile_text_black"
+                    android:textSize="@dimen/_14sdp" />
+
+                <View
+                    android:id="@+id/view_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/txt_id_value"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/profile_divider_color" />
+
+                <TextView
+                    android:id="@+id/txt_passport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_four"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:text="@string/passport"
+                    android:textAllCaps="false"
+                    android:textColor="@color/profile_text_gray"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview"
+                    android:layout_width="@dimen/_135sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_below="@id/txt_passport"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    app:cardElevation="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/passportImg"
+                        android:layout_width="@dimen/_135sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/action_ripple"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/pdf_passport_icon" />
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:id="@+id/view_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/cardview"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/profile_divider_color" />
+
+                <LinearLayout
+                    android:id="@+id/change_password_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_five"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/edittext_login"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="0"
+                        android:background="@drawable/change_pass_icon"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="3"
+                        android:background="@null"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/change_password"
+                        android:textAllCaps="false"
+                        android:textColor="@color/profile_text_black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="0"
+                        android:background="@drawable/forward_icon"
+                        android:contentDescription="@string/app_name" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/logout_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/change_password_layout"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/logout_field_drawable"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_7sdp"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="0"
+                        android:background="@drawable/logout_icon"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="3"
+                        android:background="@null"
+                        android:fontFamily="@font/manrope_medium"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/logout"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_app" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="0"
+                        android:background="@drawable/forward_icon"
+                        android:contentDescription="@string/app_name" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/progress_api"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@color/dark_background"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progress_bar_api"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_centerHorizontal="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/white" />
+
+            <TextView
+                android:id="@+id/please_wait_api"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/progress_bar_api"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/manrope_bold"
+                android:text="@string/please_wait"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20sdp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_above_back"
+        tools:context=".activities.BillsPaidDetailActivity">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:background="@drawable/action_ripple"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/back_white_icon" />
+
+            <TextView
+                android:id="@+id/txt_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/manrope_semibold"
+                android:text="Bill #37462"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_17sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:background="@drawable/back_main_below">
+
+            <LinearLayout
+                android:id="@+id/payment_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/invoice_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/invoice_id"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/invoice_id_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/invoice_id"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="738686"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/_13sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/ref_check_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/ref_cheque_no"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/ref_check_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ref_check_id"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="PR-3426"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/_13sdp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_one"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@id/payment_layout"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/info_line_color" />
+
+            <LinearLayout
+                android:id="@+id/invoice_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_one"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/payment_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/payment_method"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/payment_method_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/payment_method"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/manrope_medium"
+                        android:gravity="center"
+                        android:text="@string/bank_transfer"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/_13sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/amount_paid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/amount_paid"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/amount_paid_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/amount_paid"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/manrope_medium"
+                        android:gravity="center"
+                        android:text="AED 6000"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/_13sdp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_two"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@id/invoice_layout"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/info_line_color" />
+
+            <LinearLayout
+                android:id="@+id/receive_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_two"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/txt_payment_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/payment_status"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/payment_status_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_payment_status"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/manrope_medium"
+                        android:gravity="center"
+                        android:text="Paid"
+                        android:textAllCaps="false"
+                        android:textColor="@color/partial_payment_status_color"
+                        android:textSize="@dimen/_13sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_10sdp">
+
+                    <TextView
+                        android:id="@+id/paidOn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/paid_on"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/paidDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/paidOn"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/manrope_medium"
+                        android:gravity="center"
+                        android:text="12/06/24"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/_13sdp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_three"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@id/receive_layout"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/info_line_color" />
+
+            <LinearLayout
+                android:id="@+id/payment_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_three"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/payment_status_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/txt_payer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/payer"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/payer_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_payer"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/manrope_medium"
+                        android:text="Owner"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/_13sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/billCategory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:gravity="center"
+                        android:text="@string/bill_category"
+                        android:textAllCaps="false"
+                        android:textColor="@color/app_gray_main"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <TextView
+                        android:id="@+id/billCategoryValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/billCategory"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/manrope_medium"
+                        android:gravity="center"
+                        android:text="Brokerage fee"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black_app"
+                        android:textSize="@dimen/_13sdp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_four"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@id/payment_linear"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/info_line_color" />
+
+            <TextView
+                android:id="@+id/payment_receipt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_four"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/manrope_bold"
+                android:gravity="center"
+                android:text="@string/payment_receipt"
+                android:textAllCaps="false"
+                android:textColor="@color/black_app"
+                android:textSize="@dimen/_15sdp" />
+
+            <ImageView
+                android:id="@+id/payment_receipt_img"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_below="@id/payment_receipt"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/action_ripple"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/bounce_proof_img" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

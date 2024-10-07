@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_all"
+        android:title="@string/all" />
+    <item
+        android:id="@+id/menu_pending"
+        android:title="@string/pending" />
+    <item
+        android:id="@+id/menu_partial"
+        android:title="@string/partial" />
+    <item
+        android:id="@+id/menu_overdue"
+        android:title="@string/overdue" />
+    <item
+        android:id="@+id/menu_bounce"
+        android:title="@string/bounced" />
+    <item
+        android:id="@+id/menu_received"
+        android:title="@string/menu_received" />
+    <item
+        android:id="@+id/menu_deposit"
+        android:title="@string/deposit" />
+</menu>

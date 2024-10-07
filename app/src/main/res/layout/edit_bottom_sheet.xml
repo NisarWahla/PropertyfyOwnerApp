@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/passport_bottom_sheet_round"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_4sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/line" />
+
+            <TextView
+                android:id="@+id/txt_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:fontFamily="@font/manrope_semibold"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/upload_file"
+                android:textAllCaps="false"
+                android:textColor="@color/black_app"
+                android:textSize="@dimen/_16sdp" />
+
+            <TextView
+                android:id="@+id/camera_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/manrope_semibold"
+                android:padding="@dimen/_15sdp"
+                android:text="@string/camera"
+                android:textAllCaps="false"
+                android:textColor="@color/black_app"
+                android:textSize="@dimen/_14sdp"
+                app:drawableStartCompat="@drawable/camera_bottom_icon" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/viewColor" />
+
+            <TextView
+                android:id="@+id/gallery_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/manrope_semibold"
+                android:padding="@dimen/_15sdp"
+                android:text="@string/gallery"
+                android:textAllCaps="false"
+                android:textColor="@color/black_app"
+                android:textSize="@dimen/_14sdp"
+                app:drawableStartCompat="@drawable/gallery_bottom_icon" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/viewColor" />
+
+            <TextView
+                android:id="@+id/view_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/manrope_semibold"
+                android:padding="@dimen/_15sdp"
+                android:text="@string/view"
+                android:textAllCaps="false"
+                android:textColor="@color/black_app"
+                android:textSize="@dimen/_14sdp"
+                app:drawableStartCompat="@drawable/ic_opened_eye" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
